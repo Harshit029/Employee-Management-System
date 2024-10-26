@@ -2,8 +2,8 @@ services:
   - type: web
     name: employee-management-system
     env: node
-    buildCommand: npm install
-    startCommand: npm start
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && node index.js
     envVars:
       - key: NODE_ENV
         value: production
@@ -17,5 +17,3 @@ services:
         sync: false
       - key: CLOUDINARY_API_SECRET
         sync: false
-    healthCheckPath: /
-    autoDeploy: true
