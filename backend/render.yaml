@@ -1,17 +1,17 @@
 services:
   - type: web
-    name: backend
+    name: employee-management-system
     env: node
-    plan: free  # You can change this if you're using a different plan
     buildCommand: npm install
-    startCommand: npm start
-    autoDeploy: true
+    startCommand: node index.js
     envVars:
-      - key: NODE_ENV
-        value: production
-      - key: CLOUDINARY_API_KEY
-        sync: false # Example environment variable (update or add more as needed)
-      - key: CLOUDINARY_API_SECRET
+      - key: PORT
+        value: 8080
+      - key: MONGO_URL
         sync: false
-      - key: MONGODB_URI
+      - key: CLOUDINARY_NAME
+        sync: false
+      - key: CLOUDINARY_API_KEY
+        sync: false
+      - key: CLOUDINARY_API_SECRET
         sync: false
