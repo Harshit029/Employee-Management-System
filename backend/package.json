@@ -1,4 +1,4 @@
- {
+{
   "name": "backend",
   "version": "1.0.0",
   "description": "Employee Management System Backend",
@@ -25,6 +25,6 @@
     "nodemon": "^3.1.4"
   },
   "engines": {
-    "node": ">=14.0.0"
+    "node": "18.x"
   }
 }
